@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <title>To-Do List Widget</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>To-Do List <img src="images/todo.png" alt="to-do list icon" /></h2>
+        <div class="row">
+          <input type="text" id="input-box" placeholder="Input your text" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="list-container"></ul>
+      </div>
+      <div class="bar">
+        <div class="sneakerbar" id="sneakerbar">Task Added</div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
