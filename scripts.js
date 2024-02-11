@@ -25,8 +25,10 @@ function saveTasks() {
 }
 
 function addTask() {
+  let bar = true;
   if (inputBox.value === "") {
     alert("You must write something!");
+    bar = false;
   } else {
     let li = document.createElement("li");
     li.innerHTML = inputBox.value;
@@ -37,7 +39,9 @@ function addTask() {
   }
   inputBox.value = "";
   saveTasks();
-  sneakerBar("Task Added ✔️");
+  if (bar) {
+    sneakerBar("Task Added ✔️");
+  }
 }
 
 listContainer.addEventListener(
