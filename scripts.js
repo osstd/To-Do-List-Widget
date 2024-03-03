@@ -69,4 +69,28 @@ function showData() {
   }
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  var myButton = document.getElementById("mBtn");
+
+  myButton.addEventListener("touchstart", function () {
+    myButton.classList.add("hover");
+  });
+
+  myButton.addEventListener("touchend", function () {
+    myButton.classList.remove("hover");
+  });
+
+  myButton.addEventListener("mouseenter", function () {
+    if (!("ontouchstart" in window)) {
+      myButton.classList.add("hover");
+    }
+  });
+
+  myButton.addEventListener("mouseleave", function () {
+    if (!("ontouchstart" in window)) {
+      myButton.classList.remove("hover");
+    }
+  });
+});
+
 showData();
